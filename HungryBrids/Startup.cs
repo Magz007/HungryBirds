@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using HungryBirds.Models;
 
-namespace HungryBrids
+namespace HungryBirds
 {
     public class Startup
     {
@@ -50,10 +50,10 @@ namespace HungryBrids
             {
                 app.UseExceptionHandler("/Error");
             }
-
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

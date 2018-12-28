@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;   // CreateScope
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace ContosoUniversity
+namespace HungryBirds
 {
     public class Program
     {
@@ -34,6 +34,6 @@ namespace ContosoUniversity
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<HungryBrids.Startup>();
+                .UseStartup<HungryBirds.Startup>();
     }
 }
