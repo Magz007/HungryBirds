@@ -35,3 +35,10 @@ body {
         display: none;
     }
 }
+
+h1{
+    font-family:Arial;
+    color:forestgreen;
+    font-size:larger;
+
+}
