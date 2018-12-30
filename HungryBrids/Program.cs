@@ -1,4 +1,5 @@
-﻿using HungryBirds.Models;                   // SchoolContext
+﻿
+using HungryBirds.Models;                   // SchoolContext
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;   // CreateScope
@@ -20,7 +21,9 @@ namespace HungryBirds
                 try
                 {
                     var context = services.GetRequiredService<PupilContext>();
-                    context.Database.EnsureCreated();
+                    DbInitializer.Initialize(context);
+
+
                 }
                 catch (Exception ex)
                 {

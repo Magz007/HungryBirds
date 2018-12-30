@@ -7,7 +7,7 @@ namespace HungryBirds.Models
 {
     public class Meals
     {
-        public int MealId { get; set; }
+        public int MealsId { get; set; }
         public string MealName { get; set; }
         public string Colour { get; set; }
         public int Cost { get; set; }
