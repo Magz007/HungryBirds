@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using HungryBirds.Models;
 
 namespace HungryBirds.Models
 {
@@ -14,5 +15,7 @@ namespace HungryBirds.Models
         }
 
         public DbSet<HungryBirds.Models.Student> Student { get; set; }
+
+        public DbSet<HungryBirds.Models.Meals> Meals { get; set; }
     }
 }
