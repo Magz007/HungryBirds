@@ -2,97 +2,158 @@
 @model HungryBirds.Pages.MealChoiceModel
 @{
     ViewData["Title"] = "MealChoice";
+
 }
+
+<script type="text/javascript">
+
+    function validateForm() {
+
+
+        var Choice1 = document.getElementById("meat1").checked;
+        var Choice2 = document.getElementById("veg1").checked;
+        var Choice3 = document.getElementById("special1").checked;
+        var Choice4 = document.getElementById("meat2").checked;
+        var Choice5 = document.getElementById("veg2").checked;
+        var Choice6 = document.getElementById("special2").checked;
+        var Choice7 = document.getElementById("meat3").checked;
+        var Choice8 = document.getElementById("veg3").checked;
+        var Choice9 = document.getElementById("special3").checked;
+        var Choice10 = document.getElementById("meat4").checked;
+        var Choice11 = document.getElementById("veg4").checked;
+        var Choice12 = document.getElementById("special4").checked;
+        var Choice13 = document.getElementById("meat5").checked;
+        var Choice14 = document.getElementById("veg5").checked;
+        var Choice15 = document.getElementById("special5").checked;
+
+        if ((Choice1 == "") && (Choice2 == "") && (Choice3 == "")) {
+            alert("Please choose one option for Monday");
+            return false;
+        }
+        else if ((Choice4 == "") && (Choice5 == "") && (Choice6 == "")) {
+            alert("Please choose one option for Tuesday");
+            return false;
+        }
+        else if ((Choice7 == "") && (Choice8 == "") && (Choice9 == "")) {
+            alert("Please choose one option for Wednesday");
+            return false;
+        }
+       else if ((Choice10 == "") && (Choice11 == "") && (Choice12 == "")) {
+            alert("Please choose one option for Thursday");
+            return false;
+        }
+        else if ((Choice13 == "") && (Choice14 == "") && (Choice15 == "")) {
+            alert("Please choose one option for Friday");
+            return false;
+        }
+
+        return true;
+    }
+
+
+
+</script>
+
 
 <h2>Weeks Meal Choice</h2>
 
-<div class="panel panel-default">
-    <div class="panel-heading">Monday</div>
-    <div class="panel-body">
-        <div class="checkbox, label label-warning">
-            <label><input type="checkbox"> Chicken Pie</label>
+<form name="Monday" action="" onsubmit="return validateForm()" method="post" style="width:500px; margin: auto;">
+    <div class="panel panel-default">
+        <div class="panel-heading">Monday</div>
+        <div class="panel-body">
+            <div class="checkbox, label label-warning" >
+                <label><input type="checkbox" id="meat1" onclick="selectOnlyThis(this.id)"> Chicken Pie</label>
+            </div>
+            <br />
+            <div class="checkbox, label label-success">
+                <label><input type="checkbox" id="veg1" onclick="selectOnlyThis(this.id)"> Cheese pizza</label>
+            </div>
+            <br />
+            <div class="checkbox, label label-primary">
+                <label><input type="checkbox" id="special1" onclick="selectOnlyThis(this.id)"> Jacket potato</label>
+            </div>
+            <br />
         </div>
-        <br />
-        <div class="checkbox, label label-success">
-            <label><input type="checkbox"> Cheese pizza</label>
-        </div>
-        <br />
-        <div class="checkbox, label label-primary">
-            <label><input type="checkbox"> Jacket potato</label>
-        </div>
-        <br />
     </div>
-</div>
-<br />
-<div class="panel panel-default">
-    <div class="panel-heading">Tuesday</div>
-    <div class="panel-body">
-        <div class="checkbox, label label-warning">
-            <label><input type="checkbox"> Chicken Pie</label>
+
+    <br />
+    <div class="panel panel-default">
+        <div class="panel-heading">Tuesday</div>
+        <div class="panel-body" id=" tue">
+            <div class="checkbox, label label-warning">
+                <label><input type="checkbox" id="meat2"> Chicken Pie</label>
+            </div>
+            <br />
+            <div class="checkbox, label label-success">
+                <label><input type="checkbox" id="veg2"> Cheese pizza</label>
+            </div>
+            <br />
+            <div class="checkbox, label label-primary">
+                <label><input type="checkbox" id="special2"> Jacket potato</label>
+            </div>
+            <br />
         </div>
-        <br />
-        <div class="checkbox, label label-success">
-            <label><input type="checkbox"> Cheese pizza</label>
-        </div>
-        <br />
-        <div class="checkbox, label label-primary">
-            <label><input type="checkbox"> Jacket potato</label>
-        </div>
-        <br />
     </div>
-</div>
-<br />
-<div class="panel panel-default">
-    <div class="panel-heading">Wednesday</div>
-    <div class="panel-body">
-        <div class="checkbox, label label-warning">
-            <label><input type="checkbox"> Chicken Pie</label>
+    <br />
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Wednesday</div>
+        <div class="panel-body">
+            <div class="checkbox, label label-warning">
+                <label><input type="checkbox" id="meat3"> Chicken Pie</label>
+            </div>
+            <br />
+            <div class="checkbox, label label-success">
+                <label><input type="checkbox" id="veg3"> Cheese pizza</label>
+            </div>
+            <br />
+            <div class="checkbox, label label-primary">
+                <label><input type="checkbox" id="special3"> Jacket potato</label>
+            </div>
+            <br />
         </div>
-        <br />
-        <div class="checkbox, label label-success">
-            <label><input type="checkbox"> Cheese pizza</label>
-        </div>
-        <br />
-        <div class="checkbox, label label-primary">
-            <label><input type="checkbox"> Jacket potato</label>
-        </div>
-        <br />
     </div>
-</div>
-<br />
-<div class="panel panel-default">
-    <div class="panel-heading">Thursday</div>
-    <div class="panel-body">
-        <div class="checkbox, label label-warning">
-            <label><input type="checkbox"> Chicken Pie</label>
+    <br />
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Thursday</div>
+        <div class="panel-body">
+            <div class="checkbox, label label-warning">
+                <label><input type="checkbox" id="meat4"> Chicken Pie</label>
+            </div>
+            <br />
+            <div class="checkbox, label label-success">
+                <label><input type="checkbox" id="veg4"> Cheese pizza</label>
+            </div>
+            <br />
+            <div class="checkbox, label label-primary">
+                <label><input type="checkbox" id="special4"> Jacket potato</label>
+            </div>
+            <br />
         </div>
-        <br />
-        <div class="checkbox, label label-success">
-            <label><input type="checkbox"> Cheese pizza</label>
-        </div>
-        <br />
-        <div class="checkbox, label label-primary">
-            <label><input type="checkbox"> Jacket potato</label>
-        </div>
-        <br />
     </div>
-</div>
-<br />
-<div class="panel panel-default">
-    <div class="panel-heading">Friday</div>
-    <div class="panel-body">
-        <div class="checkbox, label label-warning">
-            <label><input type="checkbox"> Chicken Pie</label>
+    <br />
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Friday</div>
+        <div class="panel-body">
+            <div class="checkbox, label label-warning">
+                <label><input type="checkbox" id="meat5"> Chicken Pie</label>
+            </div>
+            <br />
+            <div class="checkbox, label label-success">
+                <label><input type="checkbox" id="veg5"> Cheese pizza</label>
+            </div>
+            <br />
+            <div class="checkbox, label label-primary">
+                <label><input type="checkbox" id="special5"> Jacket potato</label>
+            </div>
+            <br />
         </div>
-        <br />
-        <div class="checkbox, label label-success">
-            <label><input type="checkbox"> Cheese pizza</label>
-        </div>
-        <br />
-        <div class="checkbox, label label-primary">
-            <label><input type="checkbox"> Jacket potato</label>
-        </div>
-        <br />
     </div>
-</div>
-<br />
+    <br />
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
