@@ -4,7 +4,7 @@
     ViewData["Title"] = "MealChoice";
 
 }
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 
     function validateForm() {
@@ -38,7 +38,7 @@
             alert("Please choose one option for Wednesday");
             return false;
         }
-       else if ((Choice10 == "") && (Choice11 == "") && (Choice12 == "")) {
+        else if ((Choice10 == "") && (Choice11 == "") && (Choice12 == "")) {
             alert("Please choose one option for Thursday");
             return false;
         }
@@ -46,13 +46,12 @@
             alert("Please choose one option for Friday");
             return false;
         }
-
         return true;
     }
-
-
-
 </script>
+
+  
+
 
 
 <h2>Weeks Meal Choice</h2>
@@ -61,99 +60,130 @@
     <div class="panel panel-default">
         <div class="panel-heading">Monday</div>
         <div class="panel-body">
-            <div class="checkbox, label label-warning" >
-                <label><input type="checkbox" id="meat1" onclick="selectOnlyThis(this.id)"> Chicken Pie</label>
+            <div class="checkbox, label label-warning">
+                <label><input type="checkbox" id="meat1" class="Group1"> Chicken Pie</label>
             </div>
             <br />
             <div class="checkbox, label label-success">
-                <label><input type="checkbox" id="veg1" onclick="selectOnlyThis(this.id)"> Cheese pizza</label>
+                <label><input type="checkbox" id="veg1" class="Group1"> Cheese pizza</label>
             </div>
             <br />
             <div class="checkbox, label label-primary">
-                <label><input type="checkbox" id="special1" onclick="selectOnlyThis(this.id)"> Jacket potato</label>
+                <label><input type="checkbox" id="special1" class="Group1"> Jacket potato</label>
             </div>
             <br />
         </div>
     </div>
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.Group1').click(function () {
+                $('.Group1').not(this).prop('checked', false);
+            });
+        });
+    </script>
     <br />
     <div class="panel panel-default">
         <div class="panel-heading">Tuesday</div>
         <div class="panel-body" id=" tue">
             <div class="checkbox, label label-warning">
-                <label><input type="checkbox" id="meat2"> Chicken Pie</label>
+                <label><input type="checkbox" id="meat2" class="Group2"> Chicken Pie</label>
             </div>
             <br />
             <div class="checkbox, label label-success">
-                <label><input type="checkbox" id="veg2"> Cheese pizza</label>
+                <label><input type="checkbox" id="veg2" class="Group2"> Cheese pizza</label>
             </div>
             <br />
             <div class="checkbox, label label-primary">
-                <label><input type="checkbox" id="special2"> Jacket potato</label>
+                <label><input type="checkbox" id="special2" class="Group2"> Jacket potato</label>
             </div>
             <br />
         </div>
     </div>
     <br />
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.Group2').click(function () {
+                $('.Group2').not(this).prop('checked', false);
+            });
+        });
+    </script>
 
     <div class="panel panel-default">
         <div class="panel-heading">Wednesday</div>
         <div class="panel-body">
             <div class="checkbox, label label-warning">
-                <label><input type="checkbox" id="meat3"> Chicken Pie</label>
+                <label><input type="checkbox" id="meat3" class="Group3"> Chicken Pie</label>
             </div>
             <br />
             <div class="checkbox, label label-success">
-                <label><input type="checkbox" id="veg3"> Cheese pizza</label>
+                <label><input type="checkbox" id="veg3" class="Group3"> Cheese pizza</label>
             </div>
             <br />
             <div class="checkbox, label label-primary">
-                <label><input type="checkbox" id="special3"> Jacket potato</label>
+                <label><input type="checkbox" id="special3" class="Group3"> Jacket potato</label>
             </div>
             <br />
         </div>
     </div>
     <br />
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.Group3').click(function () {
+                $('.Group3').not(this).prop('checked', false);
+            });
+        });
+    </script>
 
     <div class="panel panel-default">
         <div class="panel-heading">Thursday</div>
         <div class="panel-body">
             <div class="checkbox, label label-warning">
-                <label><input type="checkbox" id="meat4"> Chicken Pie</label>
+                <label><input type="checkbox" id="meat4" class="Group4"> Chicken Pie</label>
             </div>
             <br />
             <div class="checkbox, label label-success">
-                <label><input type="checkbox" id="veg4"> Cheese pizza</label>
+                <label><input type="checkbox" id="veg4" class="Group4"> Cheese pizza</label>
             </div>
             <br />
             <div class="checkbox, label label-primary">
-                <label><input type="checkbox" id="special4"> Jacket potato</label>
+                <label><input type="checkbox" id="special4" class="Group4"> Jacket potato</label>
             </div>
             <br />
         </div>
     </div>
     <br />
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.Group4').click(function () {
+                $('.Group4').not(this).prop('checked', false);
+            });
+        });
+    </script>
 
     <div class="panel panel-default">
         <div class="panel-heading">Friday</div>
         <div class="panel-body">
             <div class="checkbox, label label-warning">
-                <label><input type="checkbox" id="meat5"> Chicken Pie</label>
+                <label><input type="checkbox" id="meat5" class="Group5"> Chicken Pie</label>
             </div>
             <br />
             <div class="checkbox, label label-success">
-                <label><input type="checkbox" id="veg5"> Cheese pizza</label>
+                <label><input type="checkbox" id="veg5" class="Group5"> Cheese pizza</label>
             </div>
             <br />
             <div class="checkbox, label label-primary">
-                <label><input type="checkbox" id="special5"> Jacket potato</label>
+                <label><input type="checkbox" id="special5" class="Group5"> Jacket potato</label>
             </div>
             <br />
         </div>
     </div>
     <br />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.Group5').click(function () {
+                $('.Group5').not(this).prop('checked', false);
+            });
+        });
+    </script>
     <button type="submit" class="btn btn-default">Submit</button>
 </form>
