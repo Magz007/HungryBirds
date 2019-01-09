@@ -1,0 +1,40 @@
+﻿@page
+@model HungryBirds.Pages.TopUpModel
+@{
+    ViewData["Title"] = "Add Funds to Your Account";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p> Current Balance:</p>
+
+
+<form action="/Home/CategoryChosen" method="get">
+    <fieldset>
+        Select a Payment Method <select id="Payment Method" name="Select Payment Method">
+
+            <option value="0">MasterCard</option>
+            <option selected="selected" value="1">Visa</option>
+            <option value="2">PayPal</option>
+        </select>
+    </fieldset>
+</form>
+<br />
+
+
+Funds to add:@Html.TextBox("Amount to Add", null, new { @class = "amountbox" })<br />
+<br />
+
+
+
+
+Card Number:@Html.TextBox("Amount to Add", null, new { @class = "Cnum" })<br />
+<br />
+Expiry date:@Html.TextBox("cus", null, new { style = "width: 50px;" })
+@Html.TextBox("cus", null, new { style = "width: 50px;" })<br />
+<br />
+Security Number:@Html.TextBox("cus", null, new { style = "width: 50px;" })<br />
+<br />
+Would you like to save these details?@Html.CheckBox("AccountID", true)<br />
+<br />
+<p><input type="submit" value="Add Funds" /> </p>
