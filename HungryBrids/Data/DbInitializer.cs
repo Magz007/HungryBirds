@@ -8,7 +8,7 @@ namespace HungryBirds.Models
     {
         public static void Initialize(PupilContext context)
         {
-            context.Database.EnsureCreated();
+            //context.Database.EnsureCreated();
 
             // Look for any students.
             if (context.Student.Any())

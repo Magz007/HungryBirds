@@ -17,7 +17,7 @@ namespace HungryBirds.Areas.Identity
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<IdentityContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("IdentityContextConnection")));
+                        context.Configuration.GetConnectionString("PupilContext")));
 
                 services.AddDefaultIdentity<IdentityUser>()
                     .AddEntityFrameworkStores<IdentityContext>();
