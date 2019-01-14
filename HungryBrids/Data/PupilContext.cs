@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using HungryBirds.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace HungryBirds.Models
 {
-    public class PupilContext : DbContext
+    public class PupilContext : IdentityDbContext<IdentityUser>
     {
         public PupilContext (DbContextOptions<PupilContext> options)
             : base(options)
