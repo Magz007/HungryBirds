@@ -38,6 +38,7 @@ namespace HungryBirds
             services.AddDbContext<PupilContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("PupilContext")));
 
+
             
         }
 
