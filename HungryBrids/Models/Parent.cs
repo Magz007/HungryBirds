@@ -11,8 +11,8 @@ namespace HungryBirds.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string Email { get; set; }
-        public int AccountBalance { get; set; }
+        public double AccountBalance { get; set; }
     }
 }

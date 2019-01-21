@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace HungryBirds.Models
 {
-    public class Meals
+    public class Selections
     {
         public int MealsId { get; set; }
-        public string MealName { get; set; }
-        public string Colour { get; set; }
-        public  double Cost { get; set; }
+        public int StudentID { get; set; }
+        public DateTime Date { get; set; }
+
     }
 }

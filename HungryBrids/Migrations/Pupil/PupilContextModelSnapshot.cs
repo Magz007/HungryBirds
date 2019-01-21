@@ -27,7 +27,7 @@ namespace HungryBirds.Migrations.Pupil
 
                     b.Property<string>("Colour");
 
-                    b.Property<int>("Cost");
+                    b.Property<double>("Cost");
 
                     b.Property<string>("MealName");
 
@@ -42,7 +42,7 @@ namespace HungryBirds.Migrations.Pupil
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AccountBalance");
+                    b.Property<double>("AccountBalance");
 
                     b.Property<string>("Address");
 
@@ -52,7 +52,7 @@ namespace HungryBirds.Migrations.Pupil
 
                     b.Property<string>("LastName");
 
-                    b.Property<int>("PhoneNumber");
+                    b.Property<string>("PhoneNumber");
 
                     b.HasKey("ParentId");
 
