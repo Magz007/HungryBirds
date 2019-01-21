@@ -6,10 +6,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using HungryBirds.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using HungryBirds.Areas.Identity.Data;
 
 namespace HungryBirds.Models
 {
-    public class PupilContext : IdentityDbContext<IdentityUser>
+    public class PupilContext : IdentityDbContext<ApplicationUser>
     {
         public PupilContext (DbContextOptions<PupilContext> options)
             : base(options)

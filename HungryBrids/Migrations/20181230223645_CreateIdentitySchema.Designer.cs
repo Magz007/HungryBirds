@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HungryBirds.Migrations
 {
-    [DbContext(typeof(IdentityContext))]
+    [DbContext(typeof(PupilContext))]
     [Migration("20181230223645_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
