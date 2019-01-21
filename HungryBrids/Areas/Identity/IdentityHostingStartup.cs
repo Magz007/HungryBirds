@@ -1,4 +1,5 @@
 ﻿using System;
+using HungryBirds.Areas.Identity.Data;
 using HungryBirds.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -15,12 +16,12 @@ namespace HungryBirds.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<IdentityContext>(options =>
+                services.AddDbContext<PupilContext>(options =>
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("PupilContext")));
 
-                services.AddDefaultIdentity<IdentityUser>()
-                    .AddEntityFrameworkStores<IdentityContext>();
+                services.AddDefaultIdentity<ApplicationUser>()
+                    .AddEntityFrameworkStores<PupilContext>();
             });
         }
     }

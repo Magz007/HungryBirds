@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace HungryBirds.Migrations.Pupil
+namespace HungryBirds.Migrations
 {
     [DbContext(typeof(PupilContext))]
-    [Migration("20190114114822_InitialPupilContextMigration")]
-    partial class InitialPupilContextMigration
+    [Migration("20190121100115_AddCustomModels")]
+    partial class AddCustomModels
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
